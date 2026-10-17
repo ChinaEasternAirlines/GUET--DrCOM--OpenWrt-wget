@@ -93,11 +93,11 @@ CRON_JOB="* * * * * /usr/bin/drcom_login.sh > /dev/null 2>&1"
 
 # 检查是否已经存在定时任务，避免重复添加
 if crontab -l 2>/dev/null | grep -Fq "/usr/bin/drcom_login.sh"; then
-    echo "✅ 定时任务已存在，跳过添加。"
+    echo "定时任务已存在，跳过添加。"
 else
     # 获取当前 crontab 并追加新任务
     (crontab -l 2>/dev/null; echo "$CRON_JOB") | crontab -
-    echo "✅ 定时任务已添加！"
+    echo "定时任务已添加！"
 fi
 
 # 5. 立即执行一次认证测试
@@ -108,9 +108,9 @@ echo "正在尝试立即执行一次认证..."
 # 6. 测试网络连通性
 echo "正在测试外网连接 (ping 223.5.5.5)..."
 if ping -c 3 223.5.5.5 > /dev/null 2>&1; then
-    echo "🎉 认证成功，外网连接正常！"
+    echo "认证成功，外网连接正常！"
 else
-    echo "⚠️ 认证可能失败或外网不通，请检查账号密码或稍后重试。"
+    echo "认证可能失败或外网不通，请检查账号密码或稍后重试。"
 fi
 
 echo "===================================================="

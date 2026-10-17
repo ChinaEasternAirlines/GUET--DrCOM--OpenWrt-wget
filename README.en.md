@@ -1,4 +1,4 @@
-
+[汉语](./README.md) | **English** | [日本語](./README.ja.md)
 # GUET DrCOM OpenWrt wget Auto-Authentication
 
 OpenWrt auto-login script for Guilin University of Electronic Technology (GUET) campus network Dr.COM authentication. Implemented using `wget`, supporting auto-reconnection.

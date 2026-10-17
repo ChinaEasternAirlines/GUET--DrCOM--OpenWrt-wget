@@ -1,3 +1,4 @@
+**汉语** | [English](./README.en.md) | [日本語](./README.ja.md)
 # 桂电 DrCOM OpenWrt wget 自动认证
 
 桂林电子科技大学校园网 Dr.COM 认证的 OpenWrt 自动登录脚本，使用 wget 实现，支持断线重连。

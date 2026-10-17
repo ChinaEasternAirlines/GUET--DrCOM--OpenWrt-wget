@@ -1,0 +1,5 @@
+STUDENT_ID="你的学号"
+PASSWORD="你的密码"
+OPERATOR="unicom"
+R3="2"
+AUTH_SERVER="10.0.1.5"

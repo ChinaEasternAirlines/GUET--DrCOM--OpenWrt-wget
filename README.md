@@ -9,14 +9,25 @@
 - “校园网”（移动/电信/联通可改参数）
 
 ## 安装
+>自动安装
+
+在SSH中输入
+```bash
+   wget -O /tmp/install.sh https://raw.githubusercontent.com/ChinaEasternAirlines/GUET--DrCOM--OpenWrt-wget/main/install.sh
+```
+
+无外网连接情况下,请手动下载install.sh,并在SSH中运行.
+
+> 手动安装
 1. 将 `scripts/wget_auth.sh` 上传到 OpenWrt 的 `/usr/bin/`
 2. 赋予执行权限：`chmod +x /usr/bin/wget_auth.sh`
 3. 修改脚本中的学号、密码、运营商
-4. 添加定时任务：`crontab -e`，加入：
+4. 添加定时任务：`crontab -e`，加入
+
 
 ***
 
-## 或直接在SSH中操作(实测可用)
+## 或直接在SSH中操作
 ### 🚨 第一步：先用 wget 完成认证
 
 注意:

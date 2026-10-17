@@ -6,7 +6,7 @@ OpenWrt auto-login script for Guilin University of Electronic Technology (GUET) 
 
 ## Applicable Environment
 - OpenWrt 25.12+
-- GUET Campus Network Dr.COM Authentication
+- GUET Campus Network DrCOM Authentication
 - "Campus Network" (Mobile/Telecom/Unicom parameters can be modified)
 
 ## Installation

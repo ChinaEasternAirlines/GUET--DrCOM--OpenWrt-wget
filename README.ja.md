@@ -1,3 +1,4 @@
+[汉语](./README.md) | [English](./README.en.md) | **日本語**
 # 桂林電子科技大学 DrCOM OpenWrt wget 自動認証
 
 桂林電子科技大学（GUET）キャンパスネットワークの Dr.COM 認証用 OpenWrt 自動ログインスクリプトです。`wget` を使用して実装され、切断時の自動再接続をサポートします。

@@ -85,7 +85,7 @@ EOF
 
 # 赋予执行权限
 chmod +x /usr/bin/drcom_login.sh
-echo "✅ 核心脚本已生成: /usr/bin/drcom_login.sh"
+echo "核心脚本已生成: /usr/bin/drcom_login.sh"
 
 # 4. 配置定时任务 (Crontab)
 echo "正在配置定时任务 (每分钟检测一次)..."

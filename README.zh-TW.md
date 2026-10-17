@@ -1,7 +1,7 @@
 [简体中文](./README.md) | **繁體中文** | [English](./README.en.md) | [日本語](./README.ja.md)
 # 桂電 DrCOM OpenWrt wget 自動認證
 
-桂林電子科技大學校園網路 Dr.COM 認證的 OpenWrt 自動登入腳本，使用 `wget` 實現，支援斷線重連。
+桂林電子科技大學校園網路 DrCOM 認證的 OpenWrt 自動登入腳本，使用 `wget` 實現，支援斷線重連。
 > 以下內容由 DeepSeek 產生或有 DeepSeek 參與編寫🥰
 
 ## 適用環境

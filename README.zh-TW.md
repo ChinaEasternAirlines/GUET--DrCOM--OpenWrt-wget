@@ -80,6 +80,8 @@ crontab -e
 
 如有侵權或其他處理不當的情況，可透過信箱 ```CEAir@outlook.jp``` 或 QQ ```2769431445``` 聯絡本人QAQ
 
+### AI
+- DeepSeek～
 ### 開源專案
 
 - [chainsx/drcom_guet](https://github.com/chainsx/drcom_guet) — 桂電 Dr.COM 認證 Python 實現，提供了認證邏輯與參數格式的核心參考

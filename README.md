@@ -79,6 +79,9 @@ crontab -e
 
 如有侵权或其他处理不当的情况,可通过邮箱```CEAir@outlook.jp```或QQ```2769431445```联系本人QAQ
 
+### AI
+DeepSeek～
+
 ### 开源项目
 
 - [chainsx/drcom_guet](https://github.com/chainsx/drcom_guet) — 桂电 Dr.COM 认证 Python 实现，提供了认证逻辑与参数格式的核心参考

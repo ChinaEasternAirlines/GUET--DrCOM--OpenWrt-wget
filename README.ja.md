@@ -80,6 +80,9 @@ crontab -e
 
 権利侵害や不適切な処理がある場合は、メール CEAir@outlook.jp または QQ 2769431445 までご連絡ください QAQ
 
+### AI
+- DeepSeek～
+
 ### オープンソースプロジェクト
 
 - [chainsx/drcom_guet](https://github.com/chainsx/drcom_guet) — GUET Dr.COM 認証の Python 実装。認証ロジックとパラメータ形式の核心的な参考になりました。

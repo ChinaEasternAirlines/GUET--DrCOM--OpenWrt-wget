@@ -80,7 +80,7 @@ crontab -e
 如有侵权或其他处理不当的情况,可通过邮箱```CEAir@outlook.jp```或QQ```2769431445```联系本人QAQ
 
 ### AI
-DeepSeek～
+- DeepSeek～
 
 ### 开源项目
 

@@ -80,6 +80,9 @@ This project would not be possible without the help of the following open-source
 
 If there is any infringement or improper handling, please contact me via email CEAir@outlook.jp or QQ 2769431445 QAQ
 
+### AI
+- DeepSeek～
+
 ### Open Source Projects
 
 - [chainsx/drcom_guet](https://github.com/chainsx/drcom_guet) — GUET Dr.COM auth Python implementation, provided core reference for auth logic and parameters.

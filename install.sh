@@ -21,7 +21,7 @@ if [ -z "$STUDENT_ID" ]; then
     exit 1
 fi
 
-# 隐藏密码输入
+# 隐藏密码输入 (输入时不显示明文，增强安全性)
 stty -echo
 read -p "请输入你的校园网密码: " PASSWORD
 stty echo
@@ -31,19 +31,20 @@ if [ -z "$PASSWORD" ]; then
     exit 1
 fi
 
+# 菜单排序：校园网放第一位，设为默认
 echo "请选择你的运营商:"
-echo "  1) 联通 (Unicom)"
-echo "  2) 移动 (CMCC)"
-echo "  3) 电信 (Telecom)"
-echo "  4) 校园网 (Campus)"
-read -p "请输入对应数字 [1-4] (默认 1): " ISP_CHOICE
+echo "  1) 校园网 (Campus) - 默认"
+echo "  2) 联通 (Unicom)"
+echo "  3) 移动 (CMCC)"
+echo "  4) 电信 (Telecom)"
+read -p "请输入对应数字 [1-4] (直接回车默认 1): " ISP_CHOICE
 
 # 根据选择设置运营商参数
 case "$ISP_CHOICE" in
-    2) OPERATOR="cmcc"; R3="3" ;;
-    3) OPERATOR="telecom"; R3="1" ;;
-    4) OPERATOR=""; R3="0" ;;
-    *) OPERATOR="unicom"; R3="2" ;; # 默认联通
+    2) OPERATOR="unicom"; R3="2" ;;
+    3) OPERATOR="cmcc"; R3="3" ;;
+    4) OPERATOR="telecom"; R3="1" ;;
+    *) OPERATOR=""; R3="0" ;; # 默认校园网
 esac
 
 AUTH_SERVER="10.0.1.5" # 桂电认证服务器地址
@@ -64,18 +65,39 @@ OPERATOR="$OPERATOR"
 R3="$R3"
 AUTH_SERVER="$AUTH_SERVER"
 
-# 处理用户名后缀
+# ====================================================
+# 核心函数：URL 编码转换 (URL Encode)
+# 智能处理特殊字符，防止 URL 截断
+# ====================================================
+urlencode() {
+    local string="\${1}"
+    local strlen=\${#string}
+    local encoded=""
+    local pos c o
+
+    for (( pos=0 ; pos<strlen ; pos++ )); do
+        c=\${string:\$pos:1}
+        case "\$c" in
+            [-_.~a-zA-Z0-9] ) o="\${c}" ;;
+            * ) o=\$(printf '%%%02x' "'\$c") ;;
+        esac
+        encoded="\${encoded}\${o}"
+    done
+    echo "\${encoded}"
+}
+
+# 处理参数编码
+STUDENT_ID_ENC=\$(urlencode "\$STUDENT_ID")
+PASSWORD_ENC=\$(urlencode "\$PASSWORD")
+
 if [ -n "\$OPERATOR" ]; then
-    USER="\${STUDENT_ID}%40\${OPERATOR}"
+    USER_ENC="\${STUDENT_ID_ENC}%40\${OPERATOR}"
 else
-    USER="\${STUDENT_ID}"
+    USER_ENC="\${STUDENT_ID_ENC}"
 fi
 
-# 密码转义：将 @ 替换为 %40
-PASSWORD_ENC=\$(echo "\$PASSWORD" | sed 's/@/%40/g')
-
 # 构造认证 URL
-AUTH_URL="http://\${AUTH_SERVER}/drcom/login?callback=dr1003&DDDDD=\${USER}&upass=\${PASSWORD_ENC}&0MKKey=123456&R1=0&R3=\${R3}&R6=0&para=00&v6ip=&terminal_type=1&lang=zh-cn"
+AUTH_URL="http://\${AUTH_SERVER}/drcom/login?callback=dr1003&DDDDD=\${USER_ENC}&upass=\${PASSWORD_ENC}&0MKKey=123456&R1=0&R3=\${R3}&R6=0&para=00&v6ip=&terminal_type=1&lang=zh-cn"
 
 # 检查外网是否通，不通则认证
 if ! ping -c 1 -W 3 223.5.5.5 > /dev/null 2>&1; then

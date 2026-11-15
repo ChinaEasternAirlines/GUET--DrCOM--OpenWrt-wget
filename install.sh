@@ -56,7 +56,7 @@ cat > /usr/bin/drcom_login.sh << EOF
 #!/bin/sh
 # ====================================================
 # 本脚本由 install.sh 自动生成
-# 学号: $STUDENT_ID  | 运营商: \${OPERATOR:-校园网}
+# 学号: $STUDENT_ID  | 运营商: ${OPERATOR:-校园网}
 # ====================================================
 
 STUDENT_ID="$STUDENT_ID"

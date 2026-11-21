@@ -80,6 +80,8 @@ crontab -e
 
 如有侵權或其他處理不當的情況，可透過信箱 ```CEAir@outlook.jp``` 或 QQ ```2769431445``` 聯絡本人QAQ
 
+### 貢獻者致謝
+- 感謝 [@linmu-i](https://github.com/linmu-i) 提交修復，解決了產生指令碼時電信業者（ISP）變數被錯誤跳脫導致原樣輸出的問題。
 ### AI
 - DeepSeek～
 ### 開源專案

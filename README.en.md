@@ -80,6 +80,9 @@ This project would not be possible without the help of the following open-source
 
 If there is any infringement or improper handling, please contact me via email CEAir@outlook.jp or QQ 2769431445 QAQ
 
+### Contributors
+- Thanks to [@linmu-i](https://github.com/linmu-i) for submitting a fix that resolved an issue where the ISP variable was mistakenly escaped and output literally in the generated script.
+
 ### AI
 - DeepSeek～
 

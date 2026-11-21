@@ -80,6 +80,9 @@ crontab -e
 
 権利侵害や不適切な処理がある場合は、メール CEAir@outlook.jp または QQ 2769431445 までご連絡ください QAQ
 
+### 貢献者への謝辞
+- 生成スクリプトで通信事業者（ISP）変数が誤ってエスケープされ、そのまま出力されてしまう問題を修正してくれた [@linmu-i](https://github.com/linmu-i) さんに感謝します。
+
 ### AI
 - DeepSeek～
 

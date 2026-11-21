@@ -79,6 +79,9 @@ crontab -e
 
 如有侵权或其他处理不当的情况,可通过邮箱```CEAir@outlook.jp```或QQ```2769431445```联系本人QAQ
 
+### 贡献者致谢
+- 感谢 [@linmu-i](https://github.com/linmu-i) 提交修复，解决了生成脚本中运营商变量被错误转义导致原样输出的问题。
+
 ### AI
 - DeepSeek～
 
